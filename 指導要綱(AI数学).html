@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>講師用指導要綱詳細：AI数学・基礎統計</title>
+    <style>
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 10mm;
+            }
+            body {
+                -webkit-print-color-adjust: exact;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            table {
+                page-break-inside: auto;
+            }
+            tr {
+                page-break-inside: avoid;
+                page-break-after: auto;
+            }
+        }
+
+        body {
+            font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+            font-size: 10pt;
+            color: #333;
+            line-height: 1.4;
+            width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 16pt;
+            background-color: #2c3e50; /* AI/数学系をイメージした紺色系 */
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .meta-box {
+            border: 1px solid #444;
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .lecture-block {
+            border: 1px solid #444;
+            margin-bottom: 25px;
+            padding: 15px;
+            page-break-inside: avoid;
+            background-color: #fff;
+        }
+
+        .lecture-header {
+            background-color: #e3f2fd; /* 薄い青 */
+            padding: 5px 10px;
+            border-bottom: 1px solid #444;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 11pt;
+        }
+
+        .purpose-box {
+            background-color: #f9f9f9;
+            border-left: 5px solid #2c3e50;
+            padding: 8px;
+            margin-bottom: 10px;
+            font-size: 9.5pt;
+        }
+
+        .time-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            font-size: 9.5pt;
+        }
+
+        .time-table th, .time-table td {
+            border: 1px solid #ccc;
+            padding: 4px;
+            vertical-align: top;
+        }
+
+        .time-table th {
+            background-color: #f0f0f0;
+            text-align: center;
+            width: 12%;
+        }
+
+        .point-box {
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 9.5pt;
+        }
+
+        .point-title {
+            font-weight: bold;
+            color: #2e7d32;
+            display: inline-block;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>講師用指導要綱詳細：AI数学・基礎統計</h1>
+    
+    <div class="meta-box">
+        <strong>対象：</strong>AI専攻 前期（週1コマ90分 × 12回）<br>
+        <strong>教材：</strong>WEB教材 【01 数学】<br>
+        <strong>授業の目的：</strong><br>
+        機械学習やディープラーニングのアルゴリズムを数理的に理解するために必要不可欠な数学的基礎知識（微分積分、線形代数、確率・統計）を習得する。
+        単なる計算技術の習得に留まらず、それぞれの数式がAIのどの工程（勾配降下法、データ変換、予測モデル等）で活用されているかを理解させる。
+    </div>
+
+    <!-- 第1回 -->
+    <div class="lecture-block">
+        <div class="lecture-header">
+            <span>第1回：AI数学概論</span>
+            <span>テキスト：01-01~03</span>
+        </div>
+        <div class="purpose-box">
+            <strong>【授業の目的】</strong><br>
+            AI・機械学習開発においてなぜ数学が必要なのか、その全体像（微分・行列・統計の役割）を理解する。
+        </div>
+        <table class="time-table">
+            <tr><th>時間</th><th>フェーズ</th><th>学習内容・活動詳細</th></tr>
+            <tr>
+                <td align="center">20分</td>
+                <td>導入</td>
+                <td>・AIの学習プロセス（学習・予測・評価）の概要説明。<br>・各工程と数学の関係性のマッピング。</td>
+            </tr>
+            <tr>
+                <td align="center">40分</td>
+                <td>講義</td>
+                <td>・データの数値化（ベクトル・行列）の概念。<br>・誤差を最小化する仕組み（微分）の触り。</td>
+            </tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>演習</td>
+                <td>・身近なAI事例（リコメンド等）に使われている数学要素を考えるグループワーク。<br>・プレテスト（基礎算術力の確認）。</td>
+            </tr>
+        </table>
+        <div class="point-box">
+            <span class="point-title">📌 指導ポイント</span><br>
+            「数学＝難しい」という苦手意識を払拭するため、最初は数式を最小限にし、概念図を用いて「数学が何に使われているか」のイメージを優先させてください。
+        </div>
+    </div>
+
+    <!-- 第2回 -->
+    <div class="lecture-block">
+        <div class="lecture-header">
+            <span>第2回：微分積分の基礎(1)</span>
+            <span>テキスト：01-02</span>
+        </div>
+        <div class="purpose-box">
+            <strong>【授業の目的】</strong><br>
+            導関数の概念を理解し、基本的な関数の微分計算ができるようになる。
+        </div>
+        <table class="time-table">
+            <tr><th>時間</th><th>フェーズ</th><th>学習内容・活動詳細</th></tr>
+            <tr>
+                <td align="center">25分</td>
+                <td>講義</td>
+                <td>・極限と微分の定義。<br>・関数の傾きと変化率の意味。<br>・公式（$x^n$, 三角関数、指数関数）の解説。</td>
+            </tr>
+            <tr>
+                <td align="center">45分</td>
+                <td>演習</td>
+                <td>・導関数の計算ドリル。<br>・合成関数の微分（チェインルール）の実演と練習。</td>
+            </tr>
+            <tr>
+                <td align="center">20分</td>
+                <td>解説</td>
+                <td>・演習問題の解説。<br>・AIにおける「誤差逆伝播法」でチェインルールがどう使われるかの予察。</td>
+            </tr>
+        </table>
+        <div class="point-box">
+            <span class="point-title">📌 指導ポイント</span><br>
+            計算機での微分ではなく、手計算で微分の感覚を掴ませることが目的です。合成関数の微分はディープラーニングの肝となるため、確実に理解させてください。
+        </div>
+    </div>
+
+    <!-- 第3回 -->
+    <div class="lecture-block">
+        <div class="lecture-header">
+            <span>第3回：微分積分の基礎(2)</span>
+            <span>テキスト：01-02</span>
+        </div>
+        <div class="purpose-box">
+            <strong>【授業の目的】</strong><br>
+            積分の基礎と、多変数関数における「偏微分」の概念を理解する。
+        </div>
+        <table class="time-table">
+            <tr><th>時間</th><th>フェーズ</th><th>学習内容・活動詳細</th></tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>講義</td>
+                <td>・定積分と不定積分の計算。<br>・偏微分：他の変数を定数とみなして微分する手法。<br>・勾配（グラディエント）の概念。</td>
+            </tr>
+            <tr>
+                <td align="center">40分</td>
+                <td>演習</td>
+                <td>・偏微分の計算練習。<br>・簡単な2次関数を用いた勾配降下法（山下り）のシミュレーション計算。</td>
+            </tr>
+            <tr>
+                <td align="center">20分</td>
+                <td>まとめ</td>
+                <td>・微分と最適化問題（最小化）の関係性の整理。</td>
+            </tr>
+        </table>
+        <div class="point-box">
+            <span class="point-title">📌 指導ポイント</span><br>
+            「偏微分」こそが機械学習の最適化（ウェイトの更新）に直結します。多変数でも「1つに注目するだけ」という単純化のメリットを伝えてください。
+        </div>
+    </div>
+
+    <!-- 第4回 -->
+    <div class="lecture-block">
+        <div class="lecture-header">
+            <span>第4回：線形代数(1)</span>
+            <span>テキスト：01-03</span>
+        </div>
+        <div class="purpose-box">
+            <strong>【授業の目的】</strong><br>
+            ベクトルと行列の基本演算を習得し、大量のデータを一括処理する数学的表現に慣れる。
+        </div>
+        <table class="time-table">
+            <tr><th>時間</th><th>フェーズ</th><th>学習内容・活動詳細</th></tr>
+            <tr>
+                <td align="center">20分</td>
+                <td>講義</td>
+                <td>・ベクトルと行列の定義。<br>・加減算とスカラー倍。<br>・<strong>重要：</strong>行列の積の計算ルール。</td>
+            </tr>
+            <tr>
+                <td align="center">50分</td>
+                <td>演習</td>
+                <td>・行列の積の計算ドリル。<br>・転置行列、単位行列、逆行列の概念確認。</td>
+            </tr>
+            <tr>
+                <td align="center">20分</td>
+                <td>解説</td>
+                <td>・なぜAIでは「forループ」より「行列計算」が速いのか、GPUの役割に触れる。</td>
+            </tr>
+        </table>
+        <div class="point-box">
+            <span class="point-title">📌 指導ポイント</span><br>
+            行列の積（左の行×右の列）は最初は混乱しやすいため、指でなぞりながら計算させるなど、身体的な慣れを促してください。評価指標にある(7, 10, 13)等の数値が出る課題を含めてください。
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- 第5回 -->
+    <div class="lecture-block">
+        <div class="lecture-header">
+            <span>第5回：線形代数(2)</span>
+            <span>テキスト：01-03</span>
+        </div>
+        <div class="purpose-box">
+            <strong>【授業の目的】</strong><br>
+            行列式の算出と、1次方程式を解くための逆行列の活用方法を理解する。
+        </div>
+        <table class="time-table">
+            <tr><th>時間</th><th>フェーズ</th><th>学習内容・活動詳細</th></tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>講義</td>
+                <td>・2次、3次の行列式の求め方（サラスの方法）。<br>・行列式が0になる意味（逆行列が存在しない）。<br>・連立1次方程式を行列で解く手法。</td>
+            </tr>
+            <tr>
+                <td align="center">40分</td>
+                <td>演習</td>
+                <td>・掃き出し法による逆行列の算出。<br>・評価資料にある「課題1(1)」を想定した数値計算。</td>
+            </tr>
+            <tr>
+                <td align="center">20分</td>
+                <td>解説</td>
+                <td>・行列による「空間の変換（拡大・回転・縮小）」のビジュアル解説。</td>
+            </tr>
+        </table>
+        <div class="point-box">
+            <span class="point-title">📌 指導ポイント</span><br>
+            行列式は「面積や体積の拡大率」であることを図示すると納得感が高まります。
+        </div>
+    </div>
+
+    <!-- 第6回 -->
+    <div class="lecture-block">
+        <div class="lecture-header">
+            <span>第6回：線形代数(3)</span>
+            <span>テキスト：01-03</span>
+        </div>
+        <div class="purpose-box">
+            <strong>【授業の目的】</strong><br>
+            「固有値・固有ベクトル」の概念を理解し、特異値分解など次元削減への応用を学ぶ。
+        </div>
+        <table class="time-table">
+            <tr><th>時間</th><th>フェーズ</th><th>学習内容・活動詳細</th></tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>講義</td>
+                <td>・固有値・固有ベクトルの定義式 ($Ax = \lambda x$)。<br>・行列を特徴づける「軸」の発見。</td>
+            </tr>
+            <tr>
+                <td align="center">40分</td>
+                <td>講義・演習</td>
+                <td>・固有方程式の解法演習。<br>・主成分分析（PCA）における固有値の役割（データのばらつきが大きい方向の抽出）。</td>
+            </tr>
+            <tr>
+                <td align="center">20分</td>
+                <td>演習</td>
+                <td>・2×2行列の固有値を求める基本問題。</td>
+            </tr>
+        </table>
+        <div class="point-box">
+            <span class="point-title">📌 指導ポイント</span><br>
+            固有値計算は抽象的で挫折しやすい箇所です。「データの最も特徴的な方向を見つけるための道具」という目的を繰り返し強調してください。
+        </div>
+    </div>
+
+    <!-- 第7回 -->
+    <div class="lecture-block">
+        <div class="lecture-header">
+            <span>第7回：確率統計(1)</span>
+            <span>テキスト：01-04</span>
+        </div>
+        <div class="purpose-box">
+            <strong>【授業の目的】</strong><br>
+            確率の定義と、AIの推定で重要となる「ベイズの定理」の基礎を習得する。
+        </div>
+        <table class="time-table">
+            <tr><th>時間</th><th>フェーズ</th><th>学習内容・活動詳細</th></tr>
+            <tr>
+                <td align="center">20分</td>
+                <td>講義</td>
+                <td>・標本空間と事象。<br>・条件付き確率 $P(A|B)$ の意味。</td>
+            </tr>
+            <tr>
+                <td align="center">40分</td>
+                <td>講義・演習</td>
+                <td>・<strong>ベイズの定理：</strong>事前確率から事後確率を更新する仕組み。<br>・スパムフィルタを例にした確率計算の実演。</td>
+            </tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>演習</td>
+                <td>・ベイズの定理を用いた基本問題（検査の陽性率など）。</td>
+            </tr>
+        </table>
+        <div class="point-box">
+            <span class="point-title">📌 指導ポイント</span><br>
+            ベイズの定理は「情報が増えると正解の精度が上がる」という実体験に近い理論です。迷惑メールフィルタの例など、身近な実例で納得させてください。
+        </div>
+    </div>
+
+    <!-- 第8回 -->
+    <div class="lecture-block">
+        <div class="lecture-header">
+            <span>第8回：確率統計(2)</span>
+            <span>テキスト：01-04</span>
+        </div>
+        <div class="purpose-box">
+            <strong>【授業の目的】</strong><br>
+            データの中心を表す指標（平均）と、ばらつきを表す指標（分散・標準偏差）の意味を理解する。
+        </div>
+        <table class="time-table">
+            <tr><th>時間</th><th>フェーズ</th><th>学習内容・活動詳細</th></tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>講義</td>
+                <td>・算術平均、期待値。<br>・分散、標準偏差の算出公式（偏差の2乗の平均）。<br>・相関係数と共分散。</td>
+            </tr>
+            <tr>
+                <td align="center">40分</td>
+                <td>演習</td>
+                <td>・少数のデータセットを用いた平均・分散・偏差の手計算演習。<br>・Excel等を使わず、公式の構造を理解させる。</td>
+            </tr>
+            <tr>
+                <td align="center">20分</td>
+                <td>解説</td>
+                <td>・標準偏差がAIの「正規化」や「初期化」にどう関わるか。</td>
+            </tr>
+        </table>
+        <div class="point-box">
+            <span class="point-title">📌 指導ポイント</span><br>
+            分散の計算で「なぜ2乗するのか（符号を消す・差を強調する）」を物理的なイメージで説明してください。
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- 第9回 -->
+    <div class="lecture-block">
+        <div class="lecture-header">
+            <span>第9回：確率統計(3)</span>
+            <span>テキスト：01-04</span>
+        </div>
+        <div class="purpose-box">
+            <strong>【授業の目的】</strong><br>
+            代表的な確率分布（正規分布・二項分布・ポアソン分布）の特徴を理解し、現象のモデル化を学ぶ。
+        </div>
+        <table class="time-table">
+            <tr><th>時間</th><th>フェーズ</th><th>学習内容・活動詳細</th></tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>講義</td>
+                <td>・二項分布（ベルヌーイ試行）。<br>・ポアソン分布（稀な事象）。<br>・正規分布（ガウス分布）と中心極限定理。</td>
+            </tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>講義・演習</td>
+                <td>・標準化（zスコア）の算出と、標準正規分布表の読み方。<br>・偏差値の計算。</td>
+            </tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>演習</td>
+                <td>・特定の確率分布に従う事象の確率を求める問題。</td>
+            </tr>
+        </table>
+        <div class="point-box">
+            <span class="point-title">📌 指導ポイント</span><br>
+            「正規分布」は機械学習の前提条件として非常によく登場します。ベルカーブの形状と「平均±標準偏差」の範囲の確率（68-95-99.7ルール）は暗記させてください。
+        </div>
+    </div>
+
+    <!-- 第10回 -->
+    <div class="lecture-block">
+        <div class="lecture-header">
+            <span>第10回：確率統計(4)</span>
+            <span>テキスト：01-04</span>
+        </div>
+        <div class="purpose-box">
+            <strong>【授業の目的】</strong><br>
+            一部のデータ（標本）から全体（母集団）を推測する「推定・検定」の基礎を理解する。
+        </div>
+        <table class="time-table">
+            <tr><th>時間</th><th>フェーズ</th><th>学習内容・活動詳細</th></tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>講義</td>
+                <td>・母集団と標本。<br>・点推定と区間推定。<br>・最尤推定（もっともらしいパラメータの探し方）。</td>
+            </tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>講義</td>
+                <td>・仮説検定の考え方（帰無仮説と対立仮説）。<br>・有意水準とp値の意味。</td>
+            </tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>演習</td>
+                <td>・信頼区間の算出練習。</td>
+            </tr>
+        </table>
+        <div class="point-box">
+            <span class="point-title">📌 指導ポイント</span><br>
+            「最尤推定」はニューラルネットワークのコスト関数を最小化することと同じ目的であることを伝えると、これまでの微分と統計が繋がります。
+        </div>
+    </div>
+
+    <!-- 第11回 -->
+    <div class="lecture-block">
+        <div class="lecture-header">
+            <span>第11回：数理演習</span>
+            <span>テキスト：01-01~04（総合）</span>
+        </div>
+        <div class="purpose-box">
+            <strong>【授業の目的】</strong><br>
+            これまでの学習範囲（微分・行列・統計）を統合し、評価基準に沿った総合問題に対応できる力をつける。
+        </div>
+        <table class="time-table">
+            <tr><th>時間</th><th>フェーズ</th><th>学習内容・活動詳細</th></tr>
+            <tr>
+                <td align="center">10分</td>
+                <td>オリエンテーション</td>
+                <td>・評価基準と課題提出方法の再確認。</td>
+            </tr>
+            <tr>
+                <td align="center">60分</td>
+                <td>演習</td>
+                <td>・<strong>総合課題の実施：</strong><br>　(1) 行列の積と逆行列の計算。<br>　(2) 偏微分の算出。<br>　(3) 標準偏差と確率密度関数の計算。</td>
+            </tr>
+            <tr>
+                <td align="center">20分</td>
+                <td>個別指導</td>
+                <td>・躓いている学生への個別フォロー。</td>
+            </tr>
+        </table>
+        <div class="point-box">
+            <span class="point-title">📌 指導ポイント</span><br>
+            「課題4(2)の解答が 2 になること」や「課題1(3)が(7,10,13)になること」など、評価指標を意識した最終チェックを行わせてください。
+        </div>
+    </div>
+
+    <!-- 第12回 -->
+    <div class="lecture-block">
+        <div class="lecture-header">
+            <span>第12回：総括・まとめ</span>
+            <span>テキスト：まとめ問題</span>
+        </div>
+        <div class="purpose-box">
+            <strong>【授業の目的】</strong><br>
+            前期「AI数学・基礎統計」の総括を行い、後期の「機械学習実習」へ向けた知識の定着を確認する。
+        </div>
+        <table class="time-table">
+            <tr><th>時間</th><th>フェーズ</th><th>学習内容・活動詳細</th></tr>
+            <tr>
+                <td align="center">40分</td>
+                <td>試験</td>
+                <td>・前期修了試験（筆記・計算）。</td>
+            </tr>
+            <tr>
+                <td align="center">30分</td>
+                <td>解説</td>
+                <td>・試験問題の回答・解説。</td>
+            </tr>
+            <tr>
+                <td align="center">20分</td>
+                <td>フィードバック</td>
+                <td>・後期科目（機械学習フレームワーク）との接続説明。<br>・課題未提出者への最終催促。</td>
+            </tr>
+        </table>
+        <div class="point-box">
+            <span class="point-title">📌 指導ポイント</span><br>
+            ここでの知識が不足していると、後期のコード（ライブラリの引数など）の意味が分からなくなります。理解が不十分な箇所は、夏休み期間の復習課題として提示してください。
+        </div>
+    </div>
+
+</body>
+</html>
